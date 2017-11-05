@@ -1,0 +1,44 @@
+@mixin font-face($font-family, $file-path, $font-weight, $font-style)
+    @font-face
+        font-family: $font-family
+        src: url('#{$file-path}.woff')
+        src: url('#{$file-path}.svg')
+        src: url('#{$file-path}.ttf') format('truetype')
+        font-weight: $font-weight
+        font-style: $font-style
+
+@include font-face('Shop', '../fonts/icons/shop', 300, normal)
+@include font-face('Oswald', '../fonts/Oswald/Oswald-Bold', 600, bold)
+@include font-face('OpenSans', '../fonts/Open_Sans/OpenSans-Regular', 300, normal)
+@include font-face('OpenSans', '../fonts/Open_Sans/OpenSans-Light', 100, light)
+@include font-face('OpenSans', '../fonts/Open_Sans/OpenSans-Bold', 600, bold)
+
+[class^="icon-"], [class*=" icon-"]
+    font-family: 'Shop' !important
+    speak: none
+    font-style: normal
+    font-weight: normal
+    font-variant: normal
+    text-transform: none
+    line-height: 1
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+
+.icon-star:before
+    content: '\e800'
+.icon-instagram:before
+    content: '\e801'
+.icon-right:before
+    content: '\e802'
+.icon-left:before
+    content: '\e803'
+.icon-facebook:before
+    content: '\f09a'
+.icon-youtube:before
+    content: '\f167'
+.icon-twitter:before
+    content: '\f309'
+.icon-pinterest:before
+    content: '\f312'
+.icon-cancel:before
+    content: '\e804'
