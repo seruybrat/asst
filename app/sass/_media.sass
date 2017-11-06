@@ -10,12 +10,16 @@ $sm: 420px
         padding-left: 15px
 
     .item
+
         &__pic
             width: 45%
             height: auto
+            margin-right: 45px
 
 @media (min-width: $md)
+
     .grid
+
         &__item
             width: 33.3333%
             padding-bottom: 20px
@@ -32,14 +36,26 @@ $sm: 420px
 
                 .preview__price
                     right: 6px
+
             &:nth-child(3n+3)
                 padding-left: 12px
 
                 .preview__price
                     right: 0
 
-@media (min-width: $md) and (max-width: $lg)
+@media (max-width: $md)
+
+    .item
+
+        &__pic
+            width: 100%
+            margin-right: 0
+            float: none
+
+@media (min-width: $sm) and (max-width: $md)
+
     .grid
+
         &__item
             width: 50%
             padding-bottom: 40px
@@ -62,22 +78,19 @@ $sm: 420px
                     left: 20px
                     right: 0px
 
-@media (max-width: $md)
 
-    .item
-        &__pic
-            width: 100%
-            margin-right: 0
-            float: none
 
 
 @media (max-width: $sm)
+
     .grid
         text-align: center
+
         &__item
             width: 100%
             padding: 20px
-            &:not(:last-child)
+
+            &:not(:first-child)
                 display: none
 
             .preview__price
@@ -86,9 +99,6 @@ $sm: 420px
                 left: 20px
                 right: 20px
                 bottom: 0
-    
 
-@media (max-width: $md) and (orientation: landscape)
-
-    .top-wrapper
-        height: 600px !important
+    .slider-left, .slider-right
+        display: inline-block

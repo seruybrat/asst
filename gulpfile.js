@@ -42,19 +42,10 @@ gulp.task('common-js', function() {
         .pipe(gulp.dest('app/js'));
 });
 
-gulp.task('scripts', ['common-js'], function() {
-    return gulp.src([
-        'app/js/vendor/jquery-3.2.1.min.js',
-        'app/js/common.min.js'
-        ])
-        .pipe(concat('main.min.js'))
-        .pipe(gulp.dest('app/js'));
-});
-
 gulp.task('watch', ['browser-sync'], function() {
     gulp.watch('app/sass/**/*.sass', ['sass']);
     gulp.watch('app/*.html', browserSync.reload);
-    gulp.watch('app/js/**/*.js', ['scripts', browserSync.reload]);
+    gulp.watch('app/js/**/*.js', ['common-js', browserSync.reload]);
 });
 
 gulp.task('clean', function() {
@@ -72,7 +63,7 @@ gulp.task('img', function() {
         .pipe(gulp.dest('dist/img'));
 });
 
-gulp.task('build', ['clean', 'img', 'sass', 'scripts'], function() {
+gulp.task('build', ['clean', 'img', 'sass', 'common-js'], function() {
 
     var buildCss = gulp.src([
         'app/css/main.min.css'
@@ -82,7 +73,7 @@ gulp.task('build', ['clean', 'img', 'sass', 'scripts'], function() {
     var buildFonts = gulp.src('app/fonts/**/*')
     .pipe(gulp.dest('dist/fonts'))
 
-    var buildJs = gulp.src('app/js/main.min.js')
+    var buildJs = gulp.src('app/js/common.min.js')
     .pipe(gulp.dest('dist/js'))
 
     var buildHtml = gulp.src('app/*.html')

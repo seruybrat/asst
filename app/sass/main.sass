@@ -5,7 +5,7 @@ body,html
     height: 100%
     margin: 0
     padding: 0
-    color: $font-color
+    color: $accent-color
 
 body
     font-family: 'OpenSans', sans-serif
@@ -15,63 +15,84 @@ body
 
 // Base
 
-.clearfix:after
-    content: ''
-    display: table
-    clear: both
-
-.col-4
-    width: 33.3333%
-    float: left
-
-.container
-    max-width: 835px
-    margin: 0 auto
-    box-sizing: border-box
-
 .title
     padding: 0
     margin: 0
     text-transform: uppercase
-
-.link
-    text-decoration: none
-    color: $font-color
-
-.list
-    margin: 0
-    padding: 0
-    list-style: none
-
-.main
-    display: block
-    padding: 50px 0
 
 .show
     display: block !important
 
 .hide
     display: none !important
+
+.btn
+    display: inline-block
+    padding: 14px 50px
+    border: none
+    border-radius: 30px
+    color: $accent-color
+    font-weight: bold
+    background-color: $main-color
+    text-transform: uppercase
+    box-sizing: border-box
+    transition: all .3s ease
+    cursor: pointer
+
+    &:hover
+        background-color: $accent-color
+        color: #fff
+
+// Grid
+
+.clearfix:after
+    content: ''
+    display: table
+    clear: both
+
+.container
+    max-width: 835px
+    margin: 0 auto
+    box-sizing: border-box
+
+.grid
+    @extend .clearfix
+
+    &__item
+        float: left
+        box-sizing: border-box
+
+// Main
+
+.main
+    display: block
+    padding: 50px 0
+
 // Item
 
 .item
     @extend .clearfix
     margin-bottom: 60px
+
     &__pic
         float: left
         margin-right: 55px
+
     &__main
         overflow: hidden
+
     &__title
         margin-bottom: 15px
         font-family: Oswald, sans-serif
-        color: #2c303d
+        color: $accent-color
         font-size: 1.5em
         line-height: 1.250em
+
     &__id
         margin-bottom: 20px
         font-size: 0.625em
         line-height: 1.354em
+
     &__size
         margin: 20px 0
     
@@ -84,6 +105,7 @@ body
         display: inline-block
         margin-right: 20px
         text-decoration: line-through
+
     &__new
         display: inline-block
         color: #ce2c52
@@ -99,6 +121,7 @@ body
         font-size: 0.750em
         margin: 0
         padding: 0
+
 .rating
     display: inline-block
     margin-right: 10px
@@ -109,9 +132,11 @@ body
     &-4
         .icon-star:not(:last-child)
             color: #ce2c52
+
 .dropdown
     position: relative
     display: inline-block
+
     &__title
         position: relative
         padding: 15px
@@ -119,23 +144,25 @@ body
         font-size: 1.125em
         font-weight: bold
         z-index: 2
-        &
+
     &__trigger
         display: inline-block
         color: #2c87ce
         font-size: 1.125em
         font-weight: bold
         cursor: pointer
+
     &__toggle
         display: none
         width: 285px
         margin-top: 10px
         position: absolute
         top: 100%
-        left: -105px
+        left: -97px
         background-color: #fff
         box-sizing: border-box
         box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75)
+
         &:before
             content: ''
             display: block
@@ -152,6 +179,7 @@ body
             box-shadow: 1px -1px 0 0 rgba(0, 0, 0, 0.2)
             background-clip: padding-box
             z-index: 1
+
     &__close
         position: absolute
         top: 15px
@@ -163,6 +191,7 @@ body
 .socials
     padding: 0 5px 20px
     text-align: center
+
     &__link
         display: inline-block
         margin: 0 5px
@@ -178,16 +207,22 @@ body
         border-radius: 50%
         box-sizing: border-box
         transition: all .3s ease
+
         &:hover
             background-color: #2c87ce
             color: #fff
 
-input
+// Size
+
+.input
     display: none
-    &:checked + label
-        background-color: #2c303d
-        color: #fff    
-label
+
+    &:checked + .label,
+    &.checked + .label
+        background-color: $accent-color
+        color: #fff   
+
+.label
     display: inline-block
     margin: 0 5px
     width: 40px
@@ -196,44 +231,33 @@ label
     line-height: 38px
     vertical-align: middle
     text-decoration: none
-    color: #2c303d
+    color: $accent-color
     background-color: #fff
-    border: 1px solid #2c303d
+    border: 1px solid $accent-color
     border-radius: 50%
     box-sizing: border-box
     transition: all .3s ease
+
     &:hover
-        background-color: #2c303d
-        color: #fff
-.btn
-    display: inline-block
-    padding: 14px 50px
-    border: none
-    border-radius: 30px
-    color: #2c303d
-    font-weight: bold
-    background-color: #8ae6cf
-    text-transform: uppercase
-    box-sizing: border-box
-    transition: all .3s ease
-    cursor: pointer
-    &:hover
-        background-color: #2c303d
+        background-color: $accent-color
         color: #fff
 
 // Similar
 
 .similar
+
     &__title
         margin-bottom: 20px
+
 .preview
     position: relative
+
     &__price
         display: inline-block
         position: absolute
         bottom: 20px
         padding: 5px 10px
-        background-color: #8ae6cf
+        background-color: $main-color
         font-size: 1em
         white-space: nowrap
 
@@ -241,13 +265,25 @@ label
         width: 100%
         height: auto
 
-// Grid
+// Similar
 
-.grid
-    @extend .clearfix
-    &__item
-        float: left
-        box-sizing: border-box
+.similar
+    position: relative
 
+// Slider
+    
+.slider-left, .slider-right
+    display: none
+    position: absolute
+    top: 50%
+    font-size: 3em
+    cursor: pointer
+    z-index: 2
+
+.slider-left
+    left: 0
+
+.slider-right
+    right: 0
 
 @import "media"

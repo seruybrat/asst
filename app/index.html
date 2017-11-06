@@ -14,16 +14,22 @@
 
     <div class="container">
 
+<!-- Item -->
+
         <article class="item">
 
             <img class="item__pic" src="img/pullover.jpg" alt="pullover">
             
             <div class="item__main">
+
                 <header class="item__header">
+
                     <h1 class="title item__title">For gamers by gamers TEE</h1>
+
                 </header>
                 
                 <div class="item__info">
+
                     <div class="item__id">Item #: 701642853695</div>
 
                     <div class="item__price price">
@@ -40,61 +46,91 @@
                     </div>
 
                     <div class="dropdown">
+
                         <div class="dropdown__trigger">Share it!</div>
+
                         <div class="dropdown__toggle">
+
                             <div class="dropdown__title">Share with</div>
+
                             <div class="dropdown__close">
                                 <i class="icon-cancel"></i>
                             </div>
+
                             <div class="socials">
+
                                 <a class="socials__link" href="">
                                    <i class="icon-facebook"></i>
                                 </a>
+
                                 <a class="socials__link" href="">
                                     <i class="icon-twitter"></i>
                                 </a>
+
                                 <a class="socials__link" href="">
                                     <i class="icon-pinterest"></i>
                                 </a>
+
                                 <a class="socials__link" href="">
                                     <i class="icon-youtube"></i>
                                 </a>
+
                                 <a class="socials__link" href="">
                                     <i class="icon-instagram"></i>
                                 </a>
+
                             </div>
 
                         </div>
+
                     </div>
                      
                     <div class="details">
+
                         <div class="title details__title">Details:</div>
+
                         <p class="details__txt">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                         </p> 
+
                     </div>
 
                     <div class="item__size size">
+
                         <span class="size__txt">Size:</span>
-                        <input type="radio" id="size-xs" name="size" value="xs">
-                        <label for="size-xs">XS</label>
-                        <input type="radio" id="size-s" name="size" value="s">
-                        <label for="size-s">S</label>
-                        <input type="radio" id="size-m" name="size" value="m">
-                        <label for="size-m">M</label>
-                        <input type="radio" id="size-l" name="size" value="l" checked>
-                        <label for="size-l">L</label>
+
+                        <input class="input" type="radio" id="size-xs" name="size" value="xs">
+                        <label class="label" for="size-xs">XS</label>
+
+                        <input class="input" type="radio" id="size-s" name="size" value="s">
+                        <label class="label" for="size-s">S</label>
+
+                        <input class="input" type="radio" id="size-m" name="size" value="m">
+                        <label class="label" for="size-m">M</label>
+
+                        <input class="input" type="radio" id="size-l" name="size" value="l" checked="checked">
+                        <label class="label" for="size-l">L</label>
+
                     </div>
+
                 </div>
 
                 <footer class="item__footer">
+
                     <button class="btn">Add to cart</button>
+
                 </footer>
+
             </div>
             
         </article>
 
+<!-- END Item -->
+
+<!-- Similar section -->
+
         <section class="similar">
+
             <h2 class="title similar__title">You may also like</h2>
 
             <div class="slider-left">
@@ -105,58 +141,21 @@
                 <i class="icon-right"></i>
             </div>
 
-            <div class="slider-right"></div>
+            <div class="grid" id="items">
+            
+                <!-- itemsArr here -->
 
-            <div class="grid">
-                <div class="grid__item preview">
-                    <img class="preview__pic" src="img/model1.jpg" alt="model">
-                    <div class="preview__price price">
-                        <div class="price__old">$29.99</div>
-                        <div class="price__new">$19.99</div> 
-                    </div>
-                </div>
-                <div class="grid__item preview">
-                    <img class="preview__pic" src="img/model2.jpg" alt="model">
-                    <div class="preview__price price">
-                        <div class="price__old_current">$22.00</div>
-                    </div>
-                </div>
-                <div class="grid__item preview">
-                    <img class="preview__pic" src="img/model3.jpg" alt="model">
-                    <div class="preview__price price">
-                        <div class="price__old_current">$24.99</div>
-                    </div>
-                </div>
-
-                <div class="grid__item preview">
-                    <img class="preview__pic" src="img/model4.jpg" alt="model">
-                    <div class="preview__price price">
-                        <div class="price__old">$29.99</div>
-                        <div class="price__new">$19.99</div> 
-                    </div>
-                </div>
-
-                <div class="grid__item preview">
-                    <img class="preview__pic" src="img/model5.jpg" alt="model">
-                    <div class="preview__price price">
-                        <div class="price__old_current">$60.00</div>
-                    </div>
-                </div>
-
-                <div class="grid__item preview">
-                    <img class="preview__pic" src="img/model6.jpg" alt="model">
-                    <div class="preview__price price">
-                        <div class="price__old_current">$54.00</div>
-                    </div>
-                </div>
+            </div>
 
         </section>
+
+<!-- END Similar section -->
 
     </div>
 
 </main>
 
-<script src="js/main.min.js"></script>
+<script src="js/common.min.js"></script>
 
 </body>
 </html>
