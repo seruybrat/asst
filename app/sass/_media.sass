@@ -31,26 +31,61 @@ $sm: 420px
 
                 .preview__price
                     right: 0
-    .lg-show
-        display: block !important
-
-    .lg-hidden
-        display: none !important
-
-    .md-show
-        display: none !important
-
-    .md-hidden
-        display: block !important
 
 @media (max-width: $lg)
     
     .item
+        margin-bottom: 50px
+        
+        &__id
+            margin-bottom: 18px
 
         &__pic
-            width: 45%
+            width: 50%
             height: auto
             margin-right: 45px
+
+        &__price
+            font-size: 2.250em
+            margin-bottom: 18px
+
+        &__size
+            margin: 15px 0 18px
+
+    .socials
+        &_left
+            position: absolute
+            left: 15px
+            top: 105px
+
+            .socials__link
+                display: block
+                margin-bottom: 10px
+                background-color: transparent
+
+    .details
+
+        &__title
+            margin-top: 25px
+
+        &__txt
+            font-size: 0.875em
+            margin-top: 0
+            margin-bottom: 33px
+
+    .label
+        margin: 0 20px 0 0
+
+    .btn
+        padding: 13px 40px
+        font-size: 1.125em
+
+    .similar__title
+        margin-bottom: 30px
+        text-align: center
+
+    .preview__price
+        font-size: 1.375em
 
     //Grid
 
@@ -86,18 +121,27 @@ $sm: 420px
                     left: 20px
                     right: 0px
 
-@media (min-width: $md)
-
-    .md-show
+    .show-md
         display: block !important
 
-    .md-hidden
+    .hide-md
         display: none !important
-
 
 @media (max-width: $md)
 
     .item
+        margin-bottom: 88px
+
+        &__info
+            padding: 0 35px
+
+        &__id
+            margin-top: 18px
+            font-size: 0.750em
+
+        &__title
+            margin-bottom: 25px
+            text-align: center
 
         &__pic
             width: 100%
@@ -107,16 +151,39 @@ $sm: 420px
         &__price
             font-size: 2.250em
 
-    //Grid
+        &__footer
+            margin-top: 12px
+            text-align: center
 
-    .md-show
-        display: none !important
+        &__size
+            text-align: center
 
-@media (max-width: $sm)
+    .similar__title
+        margin-bottom: 20px
+        font-size: 1.5em
+
+    .label
+        margin: 0 12px
+
+    .rating
+        margin-bottom: 28px
+
+    .socials
+        padding: 0 0 28px 0
+        text-align: left
+
+        &__link
+            margin: 0 15px 0 0
 
     .details__txt
-        font-size: 0.875em
+        font-size: 1em
+        font-weight: normal
 
+    .title_sub
+        margin: 7px 0 3px
+        font-size: 1.250em
+
+        
     .similar__title, 
     .title_sub
         text-align: center
@@ -132,12 +199,8 @@ $sm: 420px
 
         &__item
             width: 100%
-            padding: 20px !important
+            padding: 20px 45px !important
             display: none
-
-            .preview__price
-                left: 20px !important;
-                right: 20px !important;
 
             &:first-child
                 display: inline-block
@@ -145,12 +208,14 @@ $sm: 420px
             .preview__price
                 text-align: center
                 background-color: rgba(114, 187, 169, .85)
-                left: 20px
-                right: 20px
+                left: 45px !important
+                right: 45px !important
                 bottom: 0
+                font-size: 1.125em
 
-    .sm-show
-        display: block !important
-
-    .sm-hidden
+    .show-md
         display: none !important
+
+    .show-sm
+        display: block !important
+ 
