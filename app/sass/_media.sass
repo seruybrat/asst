@@ -2,26 +2,6 @@ $lg: 855px
 $md: 660px
 $sm: 420px
 
-@media (max-width: $lg)
-
-    .container
-        width: 100%
-        padding-right: 15px
-        padding-left: 15px
-
-    .item
-
-        &__pic
-            width: 45%
-            height: auto
-            margin-right: 45px
-
-    .lg-show
-        display: block !important
-
-    .lg-hidden
-        display: none !important
-
 @media (min-width: $lg)
 
     .grid
@@ -57,7 +37,27 @@ $sm: 420px
     .lg-hidden
         display: none !important
 
+    .md-show
+        display: none !important
+
+    .md-hidden
+        display: block !important
+
 @media (max-width: $lg)
+    
+    .item
+
+        &__pic
+            width: 45%
+            height: auto
+            margin-right: 45px
+
+    //Grid
+
+    .container
+        width: 100%
+        padding-right: 15px
+        padding-left: 15px
 
     .grid
         &__item
@@ -86,6 +86,8 @@ $sm: 420px
                     left: 20px
                     right: 0px
 
+@media (min-width: $md)
+
     .md-show
         display: block !important
 
@@ -101,14 +103,29 @@ $sm: 420px
             width: 100%
             margin-right: 0
             float: none
+
         &__price
             font-size: 2.250em
+
+    //Grid
+
     .md-show
         display: none !important
 
-
-
 @media (max-width: $sm)
+
+    .details__txt
+        font-size: 0.875em
+
+    .similar__title, 
+    .title_sub
+        text-align: center
+
+    .slider-left, 
+    .slider-right
+        display: inline-block
+
+    //Grid
 
     .grid
         text-align: center
@@ -131,17 +148,6 @@ $sm: 420px
                 left: 20px
                 right: 20px
                 bottom: 0
-
-    .details__txt
-        font-size: 0.875em
-
-    .similar__title, 
-    .title_sub
-        text-align: center
-
-
-    .slider-left, .slider-right
-        display: inline-block
 
     .sm-show
         display: block !important

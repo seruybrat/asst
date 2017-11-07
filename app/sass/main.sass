@@ -15,6 +15,11 @@ body
 
 // Base
 
+.item__footer,
+.similar,
+.item,
+.main
+    display: block
 .title
     padding: 0
     margin: 0
@@ -130,7 +135,10 @@ body
     color: #ababab
 
     &-4
-        .icon-star:not(:last-child)
+        .icon-star:first-child,
+        .icon-star:first-child + .icon-star,
+        .icon-star:first-child + .icon-star + .icon-star,
+        .icon-star:first-child + .icon-star + .icon-star + .icon-star,
             color: #ce2c52
 
 .dropdown
